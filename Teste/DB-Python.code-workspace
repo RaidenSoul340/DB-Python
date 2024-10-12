@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"name": "DB-Python",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"alterações",
+			"conexão",
+			"Fechar",
+			"Marca",
+			"produto",
+			"Salvando"
+		]
+	}
+}

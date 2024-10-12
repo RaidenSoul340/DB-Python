@@ -10,7 +10,7 @@ def inserir():
     Preco_Compra = float(input("Por quanto você comprou: "))
     Preco_Venda = float(input("Digite o valor de venda: "))
 
-    conn.execute(f"INSERT INTO stocks VALUES ('{data}', '{produto}', '{Marca}', '{Preco_Compra}', {Preco_Venda})")
+    conn.execute(f"INSERT INTO stocks VALUES ('{data}', '{produto.capitalize()}', '{Marca.capitalize()}', '{Preco_Compra}', {Preco_Venda})")
     conn.commit()
 
 inserir()
