@@ -149,9 +149,13 @@ def AtualizarDados():
         else:
             print("Valor Errado!")
 #===================================================================#
+#Deletando produtos na tabela:
+def deleteProduto():
+    deletePro = input("Digite o nome do produto que deseja deletar: ")
+    
+    conn.execute(f"DELETE from stocks WHERE produto = '{deletePro.capitalize()}' ")
 
-
-
+#===================================================================#
 while True:
     print("Lista de Informações de Produtos")
     print('''
@@ -183,9 +187,14 @@ while True:
         conn.commit()
         conn.close()
 
+    elif esc == '4':
+        deleteProduto()
+        conn.commit()
+        conn.close()
+
     elif esc == '5':
         print("Finalizado")
         break
     
     else:
-        print("Valor errado tente novamente")
+        print("Valor errado tente novamente!")
